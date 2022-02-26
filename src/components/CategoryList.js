@@ -9,7 +9,8 @@ class CategoryList extends Component {
     render() {
         return (
             <div>
-                <h2>{this.props.title}</h2>
+                <h2>{this.props.info.title}</h2>
+                <h4>{this.props.info.test}</h4>
                   <ListGroup>
                         <ListGroupItem
                             action
