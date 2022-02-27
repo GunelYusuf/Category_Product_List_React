@@ -14,14 +14,22 @@ class App extends Component {
        this.getProducts();
    }
 
-    getProducts = () => {
-      fetch('http://localhost:3000/products')
+    getProducts = (categoryId) => {
+       let url ='http://localhost:3000/products';
+       if (categoryId)
+       {
+           url += '?categoryId='+categoryId;
+       }
+
+
+      fetch(url)
           .then(response => response.json())
           .then(data => this.setState({products:data}));
     };
 
     changeCategory = category => {
         this.setState({currentCategory: category.categoryName});
+        this.getProducts(category.id);
     };
     render() {
         let categoryInfo={title:'Category List',test:'Special Categories'};

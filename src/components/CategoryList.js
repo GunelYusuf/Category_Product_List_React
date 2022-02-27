@@ -30,7 +30,7 @@ class CategoryList extends Component {
                           >
                          {category.categoryName}
                           </ListGroupItem>)}
-                      <h4>{this.props.currentCategory}</h4>
+                      {/*<h4>{this.props.currentCategory}</h4>*/}
                  </ListGroup>
            </div>
         );
