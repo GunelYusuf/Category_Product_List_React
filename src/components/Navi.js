@@ -7,14 +7,11 @@ import  {
     Nav,
     NavItem,
     NavLink,
-    UncontrolledDropdown,
-    DropdownMenu,
-    DropdownToggle,
-    DropdownItem,
     NavbarText } from 'reactstrap';
+import CartSummary from "./CartSummary";
 
 
- export default class Navi extends React.Component {
+class Navi extends Component {
     constructor(props) {
         super(props);
 
@@ -56,29 +53,7 @@ import  {
                                     GitHub
                                 </NavLink>
                             </NavItem>
-                            <UncontrolledDropdown
-                                inNavbar
-                                nav
-                            >
-                                <DropdownToggle
-                                    caret
-                                    nav
-                                >
-                                    Options - {this.props.cart.length}
-                                </DropdownToggle>
-                                <DropdownMenu >
-                                    <DropdownItem>
-                                        Option 1
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Option 2
-                                    </DropdownItem>
-                                    <DropdownItem divider />
-                                    <DropdownItem>
-                                        Reset
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
+                           <CartSummary cart={this.props.cart}/>
                         </Nav>
                         <NavbarText>
                             Simple Text
@@ -89,6 +64,8 @@ import  {
         );
     }
 }
+
+export default Navi;
 
 
 
