@@ -9,6 +9,7 @@ import { Routes, Route } from "react-router-dom"
 import CartList from "./components/CartList";
 import NotFound from "./components/NotFound";
 import FormDemo1 from "./components/FormDemo1";
+import FormDemo2 from "./components/FormDemo2";
 
 
 class App extends Component {
@@ -86,6 +87,7 @@ class App extends Component {
                                         /> }
                                     />
                                     <Route path="form" element={<FormDemo1/>}/>
+                                    <Route path="form2" element={<FormDemo2/>}/>
                                     <Route path="*" element={<NotFound/>}/>
                            </Routes>
 
