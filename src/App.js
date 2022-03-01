@@ -8,6 +8,7 @@ import alertify from 'alertifyjs'
 import { Routes, Route } from "react-router-dom"
 import CartList from "./components/CartList";
 import NotFound from "./components/NotFound";
+import FormDemo1 from "./components/FormDemo1";
 
 
 class App extends Component {
@@ -84,6 +85,7 @@ class App extends Component {
                                             removeFromCart={this.removeFromCart}
                                         /> }
                                     />
+                                    <Route path="form" element={<FormDemo1/>}/>
                                     <Route path="*" element={<NotFound/>}/>
                            </Routes>
 
