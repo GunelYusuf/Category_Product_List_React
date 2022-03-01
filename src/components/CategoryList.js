@@ -12,7 +12,7 @@ class CategoryList extends Component {
     }
 
     getCategory = () => {
-             fetch('http://localhost:3000/categories')
+             fetch('http://localhost:3004/categories')
             .then(response => response.json())
             .then(data => this.setState({categories:data}));
            }
